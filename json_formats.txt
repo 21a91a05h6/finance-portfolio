@@ -1,0 +1,69 @@
+GET /flights/:id
+GET /flights
+
+[
+ {
+  "id":
+  "flightname":
+  "flightnumber":
+  "date":
+  "time:
+  "departure":
+  "arrival":
+  "available seats":
+  "price":
+ }
+]
+
+
+[
+ {
+  "flight": {
+       "id":
+       "flightname":
+       "flightnumber":
+       "departure":
+       "arrival":
+       "date":
+   }
+   "bookings":{
+         "id":
+         "flightnumber":
+         "passengers":
+         "passengers":
+         "name":
+         "bookingDate":
+    }
+]
+
+
+
+
+
+
+DELETE flights/flightId
+
+POST flights/
+
+[
+ {
+  "name":
+  "passengers":
+  "flightnumber":
+ }
+]
+
+[
+ {
+  "message":'Booking Successful"
+  "bookingInformation":{
+                  "id":
+                  "name":
+                  "passengers":
+		  "flightnumber":
+		  "flightname":
+		  "Date":
+    }
+ }
+]
+         

@@ -1,0 +1,38 @@
+
+
+A travel booking web application allowed users to log in using just a username and password. The login page had no rate limiting, CAPTCHA, or multi-factor authentication (MFA). 
+This made it vulnerable to automated attacks.
+
+The Attack
+
+An attacker used a Selenium script to automate login attempts using a large list of leaked credentials stored in a file (`creds.csv`). 
+The script cycled through thousands of username-password combinations, attempting to log in to the site.
+
+Here’s how the attack worked:
+
+1. The attacker targeted the login page of the airline booking app.
+2. They used Selenium to simulate user input and submit login forms.
+3. The script pulled credentials from a CSV file and tried each one.
+4. Because the app didn’t block repeated login attempts or detect automation, the attacker was able to find valid credentials.
+5. Once logged in, the attacker accessed user accounts, potentially viewing personal travel data, payment information, and loyalty points.
+
+Why It Worked
+
+- No protection against automated login attempts.
+- No MFA to prevent access even if credentials were valid.
+- No account lockout or delay after multiple failed attempts.
+- No monitoring or alerting for suspicious login behavior.
+
+ How It Could Have Been Prevented
+
+- Implementing Multi-Factor Authentication (MFA) would have blocked access even with valid credentials.
+- Rate limiting and CAPTCHA would have slowed or stopped the automated login attempts.
+- Monitoring login failures and alerting administrators could have detected the attack early.
+- Using consistent error messages would have prevented attackers from identifying valid usernames.
+
+ Impact
+
+- Unauthorized access to user accounts.
+- Exposure of sensitive personal and financial data.
+- Potential for fraudulent bookings or misuse of loyalty rewards.
+- Damage to brand reputation and user trust.
