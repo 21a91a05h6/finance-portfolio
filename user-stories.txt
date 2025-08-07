@@ -1,0 +1,33 @@
+User Stories for Portfolio Management Application
+1. Portfolio Overview
+As a user, I want to view my portfolio so that I can see all the items (stocks, bonds, etc.) it contains.
+
+2. Performance Visualization
+As a user, I want to view the performance of my portfolio so that I can understand how it has been performing over time.
+
+3. Adding Items to the Portfolio
+As a user, I want to add stocks, bonds, or cash to my portfolio so that I can expand my investments.
+
+4. Removing Items from the Portfolio
+As a user, I want to remove stocks, bonds, or cash from my portfolio so that I can adjust my investments according to market conditions or personal preferences.
+
+5. View Portfolio Details
+As a user, I want to view detailed information about each item in my portfolio (e.g., stock ticker, volume, bond interest rate) so that I can make informed decisions about my investments.
+
+6. API for Portfolio Management
+As a developer, I want to create a REST API to store, retrieve, add, and remove portfolio items so that I can build a robust backend for the portfolio management system.
+
+7. Stock Details
+As a user, I want to see detailed stock information (like price, volume, etc.) when I add a stock to my portfolio so that I can make informed investment choices.
+
+8. Track Portfolio History
+As a user, I want to view the history of my portfolio's performance so that I can track the growth or decline of my investments over time.
+
+9. Responsive Front End
+As a user, I want to use a responsive web interface to browse my portfolio on different devices (desktop, tablet, phone) so that I can manage my portfolio anytime and anywhere.
+
+10. Search Functionality
+As a user, I want to search for specific items in my portfolio so that I can quickly find a particular stock, bond, or cash entry.
+
+11. Display Portfolio Summary
+As a user, I want to see a summary of my portfolio’s performance, including the total value and distribution across different asset types (stocks, bonds, cash) so that I can quickly assess my investment status.

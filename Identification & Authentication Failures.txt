@@ -1,0 +1,73 @@
+A07:2021 – Identification and Authentication Failures
+
+OWASP A07:2021, formerly known as Broken Authentication, is one of the top ten most critical security risks for web applications. It focuses on vulnerabilities in how applications identify and authenticate users, as well as how they manage user sessions. These weaknesses can allow attackers to impersonate legitimate users or gain unauthorized access to sensitive systems and data.
+
+Why It Matters
+
+Authentication is the gateway to any application. If this gate is weak, attackers can easily break in. According to OWASP’s 2021 data, this category had over 132,000 occurrences across tested applications, with an average exploitability score of **7.4 out of 10**—meaning these flaws are relatively easy for attackers to exploit.
+
+
+Key Concepts
+
+- Identification is the process of recognizing a user, typically through a username or email.
+- Authentication verifies that the user is who they claim to be, often using passwords, biometrics, or multi-factor authentication (MFA).
+- Session Management ensures that once a user is authenticated, their session remains secure and is properly terminated when no longer needed.
+
+---
+
+Common Vulnerabilities
+
+1. Weak Password Policies
+   Applications that allow simple passwords like “12345” or “password” are vulnerable to guessing and brute force attacks.
+
+2. Lack of Multi-Factor Authentication (MFA)  
+   Relying solely on passwords makes it easier for attackers to gain access if credentials are stolen.
+
+3. Session Fixation  
+   If an application doesn’t change the session ID after login, attackers can hijack sessions and impersonate users.
+
+4. Brute Force Attacks  
+   Without limits on login attempts, attackers can try thousands of password combinations until they succeed.
+
+5. Exposed Authentication Data  
+   Sending passwords in plaintext over HTTP allows attackers to intercept and steal credentials.
+
+6. Insecure Password Recovery 
+   Using easily guessed security questions (like “What’s your pet’s name?”) makes it easy for attackers to reset passwords.
+
+7. Broken Session Invalidation  
+   If sessions aren’t properly terminated after logout or inactivity, attackers can reuse them to gain access.
+
+
+Real-World Attack Scenarios
+
+- Credential Stuffing: Attackers use lists of known usernames and passwords to test against an application. If the app doesn’t detect or block these attempts, it can be used to validate stolen credentials.
+  
+- No MFA: A user’s password is stolen through phishing. Without MFA, the attacker can log in and access sensitive data.
+
+- Session Timeout Failure: A user accesses an app on a public computer and closes the browser without logging out. An attacker uses the same browser later and finds the session still active.
+
+
+How to Prevent These Issues
+
+- Use Multi-Factor Authentication (MFA): This adds an extra layer of security beyond just a password.
+  
+- Avoid Default or Weak Credentials: Never deploy applications with default admin passwords like “admin/admin.”
+
+- Enforce Strong Password Policies: Follow guidelines from NIST 800-63b, which recommend passphrases over complex but short passwords.
+
+- Protect Registration and Recovery Processes: Use consistent error messages to prevent attackers from guessing valid usernames or emails.
+
+- Limit Failed Login Attempts: Introduce delays or CAPTCHA after multiple failures to prevent brute force attacks.
+
+- Secure Session Management: Generate new session IDs after login, store them securely, and invalidate them after logout or inactivity.
+
+Impact of Authentication Failures
+
+The consequences of poor authentication practices can be severe:
+
+- Data Breaches: Unauthorized access to sensitive information.
+- Account Takeovers: Attackers gain control of user accounts.
+- Financial Loss: Theft, fraud, and legal penalties.
+- Reputation Damage: Loss of customer trust and brand credibility.
+- Regulatory Violations: Non-compliance with data protection laws like GDPR or HIPAA.

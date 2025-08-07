@@ -1,0 +1,128 @@
+--LIMIT
+select * from authors limit 5;
+
+--DISTINCT
+select distinct state from authors;
+
+--WHERE, AND
+select emp_id from employee where job_id=10 and job_lvl>100;
+
+--WHERE,OR
+select au_id from titleauthor where au_ord=1 or royaltyper=100;
+
+--WHERE,LIKE
+select * from authors where au_fname like "S%";
+
+-WHERE,IN,AND,BETWEEN
+select * from employee where job_id in('8','9','10') and hire_date between 1988119 and 19930319;
+
+--WHERE,IS NULL, IS NOT NULL, AND, OR
+select discounttype from discounts where (stor_id is null or lowqty is null or highqty is null) and discount is not null;
+
+select count(title) from titles where (price+advance)>10000;
+
+select sum(advance) from titles where royalty>10;
+
+select state,au_id from authors group by city having state=CA;
+
+
+. ->current
+.. ->parent
+init->make a repository, clone->get a repo
+branch->helps to work individually and keep the master undisturbed(parallel development) 
+.git ->hiddden
+git cloning done only once
+git add-->commit-->pull (incase someone makes changes)(merge conflict)-->push
+pull-->fetch+merge
+stash-->keeps things for time being so modifications can be done later
+"git rm --cached <file>..." to unstage
+git log
+commit 10596fc268cd7eb0fc9a588b39b4a4b9a6b97636 (HEAD -> master)
+Author: 21a91a05h6 <21A91A05H6@aec.edu.in>
+Date:   Thu Jul 24 08:44:19 2025 +0000
+
+    commit
+ git diff
+warning: in the working copy of 'myfile.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/myfile.txt b/myfile.txt
+index 557db03..9cb6899 100644
+--- a/myfile.txt
++++ b/myfile.txt
+@@ -1 +1,2 @@
+ Hello World
++New line
+shows the changes that are made to the local copy
+git checkout -b mybranch-->makes a new branch and also checks for branch(git checkout mybranch)
+git branch -a-->tells how many branches are there
+git ls -tree -r <branch-name>--name-only -->tells what's there on a branch without switching
+git ls -tree -r feature-xyz --name-only -->lists all the files in that branch
+mergeconflict -->happens when two people change the same thing in same file and try to merge the branches, in case of that make changes manually
+pull request-- ask permisiion from person to merge and pull
+commit==checkout(reverse), push==pull(reverse)
+
+amazon q -->llm on aws (specialist)
+
+v8 engine of js made by google helps to compile the programs easily 
+
+data types - number,string,boolean,null,undefined,object({x:'abc'}),function
+
+typeof, takes ; and let automatically 
+
+'',0,undefined,NaN are taken as false,{ } is taken true, `` use these for concatenation or anything ${} to do something, variables
+a===b, a==b, === checks identity
+(test-expression)?true-expression:false-expression (more readable than multiple if elses)
+when there is no return in a func but you call it prints undefined
+parameters=a,b,, arguments=values
+in function when a value is not given to a parameter then it takers undefined as default value.
+even if we give more arguments than compared to the number of parameters no errors will be given it takes the needed values and omits rest
+_name== _ given this cause we use get and set methods
+
+npm init helps to customize the values of the project
+
+credentials,node modules, env files can be ignored by gitignore
+
+git switch changes branches just like git checkout
+
+fork in git is Through git forking, the users can develop their own modifications to the code that belongs to someone else. the change does not reflect on original repository
+
+when a package is installed we need to edit the gitignore to ignore the node modules file
+
+await need to used on a function where it returns a promise, it represents a future result. when the promise is resolved then the await will run 
+async tells that await is there and the execution direction changes, async need to be used at a modules level
+Promise.all-->waits until all the promises are resolved
+
+generator starts the execution from where it left over the last time it got executed.
+
+in url restaurant?location=rjy (query parameter)
+
+session state can be shared between client and server and share these details back and forth it is the concept of HATEOAS
+
+listen in the web server makes the event listening activate it waits till it get a event and goes back on waiting on event loop so when we run a server it shows localhost thing
+in react js when we do create-react-app the apps already run 3000 default way so no need to give port again.
+
+should not keep database connection in verbs cause of sql injection threat the urls can be changed to handle real time database
+they don't have responsibility to know about databases.
+
+jest is a unit testing platform of javascript
+npm i -D jest -->install jest as a dependency
+npm test-->to test the unit tests
+beforeEach,afterEach
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -h localhost -p
+
+
+we log in js using console.log
+logging generally contains security info, debugging info
+metrics will tell about the ratios of how it works against something
+tracing tells what happens and where something started.
+
+nc netcat like ping in linux returns html
+markup language makes structure for presentation
+vb visual basic script allows to run programs once now js
+semantic-meaning
+
+sso-same sight origin stops the frontend talk to backend that is when cors come into view, it nullifies the security issues.
+cors only protects the browser not server
+
+filename.http in vscode makes the testing if api's 
+html page>proxy/api stub>rest>business logic>dal

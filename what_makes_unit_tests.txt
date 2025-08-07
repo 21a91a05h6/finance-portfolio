@@ -1,0 +1,30 @@
+What makes a good unit test
+smallest testable parts called units are individually and independently scrutinised for proper operation.
+
+Good unit tests are independent and isolated-They test one thing at a time, ideally with one assertion. 
+They don’t cause side effects.They don’t access global state, the file system or a database.
+
+Good unit tests are descriptive
+When a test fails you should be able to look at its name and immediately know what part of the code is broken.
+
+Good unit tests are repeatable
+Good unit tests pass every time you run them, whenever you run them, wherever you run them.
+
+Good unit tests are fast
+In general, any unit test that takes longer than half a second to run needs to be looked at.
+
+Good unit tests are not ignored
+When tests break, you need to fix them. Don’t ignore, mute or comment them out. 
+Tests that don’t run aren’t tests, they’re just dead code.
+
+Good unit tests are well structured
+Arrange: Setup the prerequisites for your test. Create objects, prepare inputs 
+and configure mocked interfaces.
+
+Act: Perform the actual work of the test, typically by calling a function.
+
+Assert: Verify that the unit under test did what you expected. Did it return the right thing, 
+or throw the correct exception? Ideally this should only require writing a single assert.
+
+unit tests are needed to be tested public functions, private functions can be called by the code only so these can not be 
+tested, private methods can be called by public methods
