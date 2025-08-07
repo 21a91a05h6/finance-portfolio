@@ -1,0 +1,7 @@
+curl --request GET 
+	--url 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-timeseries?symbol=IBM&region=US' 
+	--header 'x-rapidapi-host: apidojo-yahoo-finance-v1.p.rapidapi.com' 
+	--header 'x-rapidapi-key: 20348e2d16mshaa1cb0123ebee27p165a45jsn11bec1c1a62e'
+
+
+	4a9c5da4c0f14eda8c9b0fd1072f8614
